@@ -1,0 +1,42 @@
+// Font URL
+$font-url: "https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Old+Standard+TT:wght@400;700&display=swap";
+
+//Font Family
+$font-family: (
+	ff: (
+		body: "'Jost', sans-serif",
+		heading: "'Old Standard TT', serif",
+		p: "'Jost', sans-serif",
+		fontawesome: '"Font Awesome 6 Pro"',
+	),
+);
+
+// Font Weight
+$font-scale: (
+	fw: (
+		normal: normal,
+		thin: 100,
+		elight: 200,
+		light: 300,
+		regular: 400,
+		medium: 500,
+		sbold: 600,
+		bold: 700,
+		ebold: 800,
+		black: 900,
+	),
+);
+
+// Font Size
+$font-size: (
+	fs: (
+		body: 14px,
+		p: 14px,
+		h1: 40px,
+		h2: 36px,
+		h3: 24px,
+		h4: 20px,
+		h5: 16px,
+		h6: 14px,
+	),
+);
