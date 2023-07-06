@@ -10,7 +10,7 @@
 }
 
 // placeholder input
-@mixin tp-placeholder {
+@mixin tj-placeholder {
 	&::-webkit-input-placeholder {
 		@content;
 	}
