@@ -10,7 +10,7 @@
 }
 
 // placeholder input
-@mixin tj-placeholder {
+@mixin placeholder {
 	&::-webkit-input-placeholder {
 		@content;
 	}
@@ -23,15 +23,18 @@
 	&:-ms-input-placeholder {
 		@content;
 	}
+	&::placeholder {
+		@content;
+	}
 }
 
 // animate
-@mixin animate($animation, $duration, $repeat, $easing) {
-	-webkit-animation: $animation $duration $repeat $easing;
-	-moz-animation: $animation $duration $repeat $easing;
-	-ms-animation: $animation $duration $repeat $easing;
-	-o-animation: $animation $duration $repeat $easing;
-	animation: $animation $duration $repeat $easing;
+@mixin appearance($value) {
+	-webkit-appearance: $value;
+	-moz-appearance: $value;
+	-ms-appearance: $value;
+	-o-appearance: $value;
+	appearance: $value;
 }
 
 // filter
