@@ -15,7 +15,7 @@ error_reporting(E_ALL);
  * 
  * FIXME: Update this to your desired email address.
  */
-$recipient = "theme.junction.live@gmail.com";
+$recipient = "thisisthemeshala@gmail.com";
 
 // Set the email subject.
 $sender = $conSubject;

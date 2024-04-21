@@ -11,9 +11,8 @@
 
 /************ TABLE OF CONTENTS ***************
 
-  01. Theme Default CSS
-  02. background CSS
-	03. buttons css
+  Theme Default CSS
+	Theme Header CSS
 
 **********************************************/
 /**----------------------------------------
@@ -24,54 +23,46 @@ START: Theme Default CSS
   /**
      @Font-Family Declaration
    */
-  --tj-ff-body: 'Jost', sans-serif;
-  --tj-ff-heading: 'Old Standard TT', serif;
-  --tj-ff-p: 'Jost', sans-serif;
-  --tj-ff-fontawesome: "Font Awesome 6 Pro";
+  --ts-ff-body: 'Jost', sans-serif;
+  --ts-ff-heading: 'Old Standard TT', serif;
+  --ts-ff-p: 'Jost', sans-serif;
+  --ts-ff-fontawesome: "Font Awesome 6 Pro";
   /**
      @Font-weight Declaration
    */
-  --tj-fw-normal: normal;
-  --tj-fw-thin: 100;
-  --tj-fw-elight: 200;
-  --tj-fw-light: 300;
-  --tj-fw-regular: 400;
-  --tj-fw-medium: 500;
-  --tj-fw-sbold: 600;
-  --tj-fw-bold: 700;
-  --tj-fw-ebold: 800;
-  --tj-fw-black: 900;
+  --ts-fw-normal: normal;
+  --ts-fw-thin: 100;
+  --ts-fw-elight: 200;
+  --ts-fw-light: 300;
+  --ts-fw-regular: 400;
+  --ts-fw-medium: 500;
+  --ts-fw-sbold: 600;
+  --ts-fw-bold: 700;
+  --ts-fw-ebold: 800;
+  --ts-fw-black: 900;
   /**
      @Font-Size Declaration
    */
-  --tj-fs-body: 14px;
-  --tj-fs-p: 14px;
-  --tj-fs-h1: 40px;
-  --tj-fs-h2: 36px;
-  --tj-fs-h3: 24px;
-  --tj-fs-h4: 20px;
-  --tj-fs-h5: 16px;
-  --tj-fs-h6: 14px;
+  --ts-fs-body: 14px;
+  --ts-fs-p: 14px;
+  --ts-fs-h1: 40px;
+  --ts-fs-h2: 36px;
+  --ts-fs-h3: 24px;
+  --ts-fs-h4: 20px;
+  --ts-fs-h5: 16px;
+  --ts-fs-h6: 14px;
   /**
      @Color Declaration
    */
-  --tj-color-common-white: #ffffff;
-  --tj-color-common-black: #000000;
-  --tj-color-heading-primary: #343a40;
-  --tj-color-text-body: #777777;
-  --tj-color-theme-primary: #de2021;
-  --tj-color-theme-bg: #fff1f1;
-  --tj-color-grey-1: #c5c5c5;
-  --tj-color-grey-2: #aeaeae;
-  --tj-color-grey-3: #acacac;
-  --tj-color-grey-4: #999999;
-  --tj-color-grey-5: #f7f7f7;
-  --tj-color-grey-6: #b7b7b7;
-  --tj-color-grey-7: #a6aeb5;
-  --tj-color-grey-8: #edf2f6;
-  --tj-color-border-1: #ededed;
-  --tj-color-border-2: #e9e9e9;
-  --tj-color-border-3: #999999;
+  --ts-color-common-white: #ffffff;
+  --ts-color-common-black: #000000;
+  --ts-color-heading-primary: #343a40;
+  --ts-color-text-body: #777777;
+  --ts-color-theme-primary: #de2021;
+  --ts-color-theme-secondary: #de2021;
+  --ts-color-theme-bg: #fff1f1;
+  --ts-color-grey-1: #c5c5c5;
+  --ts-color-border-1: #ededed;
 }
 
 * {
@@ -85,10 +76,10 @@ START: Theme Default CSS
   Typography CSS
 */
 body {
-  font-family: var(--tj-ff-body);
-  font-size: var(--tj-fs-body);
+  font-family: var(--ts-ff-body);
+  font-size: var(--ts-fs-body);
   font-weight: normal;
-  color: var(--tj-color-text-body);
+  color: var(--ts-color-text-body);
   line-height: 1.6;
 }
 
@@ -102,37 +93,37 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--tj-ff-heading);
-  color: var(--tj-color-heading-primary);
+  font-family: var(--ts-ff-heading);
+  color: var(--ts-color-heading-primary);
   margin-top: 0px;
-  font-weight: var(--tj-fw-sbold);
+  font-weight: var(--ts-fw-sbold);
   line-height: 1.2;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 h1 {
-  font-size: var(--tj-fs-h1);
+  font-size: var(--ts-fs-h1);
 }
 
 h2 {
-  font-size: var(--tj-fs-h2);
+  font-size: var(--ts-fs-h2);
 }
 
 h3 {
-  font-size: var(--tj-fs-h3);
+  font-size: var(--ts-fs-h3);
 }
 
 h4 {
-  font-size: var(--tj-fs-h4);
+  font-size: var(--ts-fs-h4);
 }
 
 h5 {
-  font-size: var(--tj-fs-h5);
+  font-size: var(--ts-fs-h5);
 }
 
 h6 {
-  font-size: var(--tj-fs-h6);
+  font-size: var(--ts-fs-h6);
 }
 
 h1 a,
@@ -231,12 +222,12 @@ select,
 input:not([type=submit]):not([type=radio]):not([type=checkbox]),
 textarea {
   outline: none;
-  background-color: --tj-color-common-white;
+  background-color: --ts-color-common-white;
   height: auto;
   width: 100%;
-  font-size: var(--tj-fs-body);
-  border: 1px solid var(--tj-color-common-white);
-  color: var(--tj-color-common-black);
+  font-size: var(--ts-fs-body);
+  border: 1px solid var(--ts-color-common-black);
+  color: var(--ts-color-common-black);
   padding: 10px 15px;
 }
 
@@ -253,14 +244,19 @@ input[type=color] {
   border-radius: 50%;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ts-color-theme-primary) var(--ts-color-grey-1);
+}
+
 ::-webkit-scrollbar {
   height: 4px;
-  width: 4px;
-  background: transparent;
+  width: 6px;
+  background: var(--ts-color-grey-1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--tj-color-theme-primary);
+  background: var(--ts-color-theme-primary);
   -webkit-border-radius: 1ex;
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
 }
@@ -270,46 +266,46 @@ input[type=color] {
 }
 
 *::-moz-selection {
-  background: var(--tj-color-common-black);
-  color: var(--tj-color-common-white);
+  background: var(--ts-color-common-black);
+  color: var(--ts-color-common-white);
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: var(--tj-color-common-black);
-  color: var(--tj-color-common-white);
+  background: var(--ts-color-common-black);
+  color: var(--ts-color-common-white);
   text-shadow: none;
 }
 
 ::selection {
-  background: var(--tj-color-common-black);
-  color: var(--tj-color-common-white);
+  background: var(--ts-color-common-black);
+  color: var(--ts-color-common-white);
   text-shadow: none;
 }
 
 *::-webkit-input-placeholder {
-  color: var(--tj-color-common-black);
-  font-size: var(--tj-fs-body);
+  color: var(--ts-color-common-black);
+  font-size: var(--ts-fs-body);
   opacity: 1;
 }
 *::-moz-placeholder {
-  color: var(--tj-color-common-black);
-  font-size: var(--tj-fs-body);
+  color: var(--ts-color-common-black);
+  font-size: var(--ts-fs-body);
   opacity: 1;
 }
 *:-ms-input-placeholder {
-  color: var(--tj-color-common-black);
-  font-size: var(--tj-fs-body);
+  color: var(--ts-color-common-black);
+  font-size: var(--ts-fs-body);
   opacity: 1;
 }
 *::-ms-input-placeholder {
-  color: var(--tj-color-common-black);
-  font-size: var(--tj-fs-body);
+  color: var(--ts-color-common-black);
+  font-size: var(--ts-fs-body);
   opacity: 1;
 }
 *::placeholder {
-  color: var(--tj-color-common-black);
-  font-size: var(--tj-fs-body);
+  color: var(--ts-color-common-black);
+  font-size: var(--ts-fs-body);
   opacity: 1;
 }
 
@@ -330,6 +326,26 @@ img {
 
 .fix {
   overflow: hidden;
+}
+
+/**
+ 	WP Admin Bar CSS
+*/
+.admin-bar header.sticky {
+  margin-top: 32px;
+}
+@media only screen and (min-width: 601px) and (max-width: 782px) {
+  .admin-bar header.sticky {
+    margin-top: 46px;
+  }
+}
+@media (max-width: 600px) {
+  .admin-bar header.sticky {
+    margin-top: 0;
+  }
+  .admin-bar header.header-absolute {
+    margin-top: 46px;
+  }
 }
 
 /**

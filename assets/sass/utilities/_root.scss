@@ -7,7 +7,7 @@
   */
 	@each $ff, $shades in $font-family {
 		@each $shade, $value in $shades {
-			--tj-#{$ff}-#{$shade}: #{$value};
+			--ts-#{$ff}-#{$shade}: #{$value};
 		}
 	}
 
@@ -16,7 +16,7 @@
   */
 	@each $fw, $shades in $font-scale {
 		@each $shade, $value in $shades {
-			--tj-#{$fw}-#{$shade}: #{$value};
+			--ts-#{$fw}-#{$shade}: #{$value};
 		}
 	}
 
@@ -25,7 +25,7 @@
   */
 	@each $fs, $shades in $font-size {
 		@each $shade, $value in $shades {
-			--tj-#{$fs}-#{$shade}: #{$value};
+			--ts-#{$fs}-#{$shade}: #{$value};
 		}
 	}
 
@@ -34,7 +34,7 @@
   */
 	@each $color, $shades in $colors {
 		@each $shade, $value in $shades {
-			--tj-color-#{$color}-#{$shade}: #{$value};
+			--ts-color-#{$color}-#{$shade}: #{$value};
 		}
 	}
 }

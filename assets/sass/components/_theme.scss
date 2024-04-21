@@ -13,9 +13,8 @@
 
 /************ TABLE OF CONTENTS ***************
 
-  01. Theme Default CSS
-  02. background CSS
-	03. buttons css
+  Theme Default CSS
+	Theme Header CSS
 
 **********************************************/
 
@@ -34,10 +33,10 @@ START: Theme Default CSS
   Typography CSS
 */
 body {
-	font-family: var(--tj-ff-body);
-	font-size: var(--tj-fs-body);
+	font-family: var(--ts-ff-body);
+	font-size: var(--ts-fs-body);
 	font-weight: normal;
-	color: var(--tj-color-text-body);
+	color: var(--ts-color-text-body);
 	line-height: 1.6;
 }
 
@@ -51,36 +50,36 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--tj-ff-heading);
-	color: var(--tj-color-heading-primary);
+	font-family: var(--ts-ff-heading);
+	color: var(--ts-color-heading-primary);
 	margin-top: 0px;
-	font-weight: var(--tj-fw-sbold);
+	font-weight: var(--ts-fw-sbold);
 	line-height: 1.2;
 	@include transition(all 0.3s ease-in-out 0s);
 }
 
 h1 {
-	font-size: var(--tj-fs-h1);
+	font-size: var(--ts-fs-h1);
 }
 
 h2 {
-	font-size: var(--tj-fs-h2);
+	font-size: var(--ts-fs-h2);
 }
 
 h3 {
-	font-size: var(--tj-fs-h3);
+	font-size: var(--ts-fs-h3);
 }
 
 h4 {
-	font-size: var(--tj-fs-h4);
+	font-size: var(--ts-fs-h4);
 }
 
 h5 {
-	font-size: var(--tj-fs-h5);
+	font-size: var(--ts-fs-h5);
 }
 
 h6 {
-	font-size: var(--tj-fs-h6);
+	font-size: var(--ts-fs-h6);
 }
 
 h1 a,
@@ -176,12 +175,12 @@ select,
 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
 textarea {
 	outline: none;
-	background-color: (--tj-color-common-white);
+	background-color: (--ts-color-common-white);
 	height: auto;
 	width: 100%;
-	font-size: var(--tj-fs-body);
-	border: 1px solid var(--tj-color-common-white);
-	color: var(--tj-color-common-black);
+	font-size: var(--ts-fs-body);
+	border: 1px solid var(--ts-color-common-black);
+	color: var(--ts-color-common-black);
 	padding: 10px 15px;
 }
 
@@ -195,15 +194,17 @@ input[type="color"] {
 	padding: 0;
 	border-radius: 50%;
 }
-
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--ts-color-theme-primary) var(--ts-color-grey-1);
+}
 ::-webkit-scrollbar {
 	height: 4px;
-	width: 4px;
-	background: transparent;
+	width: 6px;
+	background: var(--ts-color-grey-1);
 }
-
 ::-webkit-scrollbar-thumb {
-	background: var(--tj-color-theme-primary);
+	background: var(--ts-color-theme-primary);
 	-webkit-border-radius: 1ex;
 	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
 }
@@ -213,25 +214,25 @@ input[type="color"] {
 }
 
 *::-moz-selection {
-	background: var(--tj-color-common-black);
-	color: var(--tj-color-common-white);
+	background: var(--ts-color-common-black);
+	color: var(--ts-color-common-white);
 	text-shadow: none;
 }
 ::-moz-selection {
-	background: var(--tj-color-common-black);
-	color: var(--tj-color-common-white);
+	background: var(--ts-color-common-black);
+	color: var(--ts-color-common-white);
 	text-shadow: none;
 }
 ::selection {
-	background: var(--tj-color-common-black);
-	color: var(--tj-color-common-white);
+	background: var(--ts-color-common-black);
+	color: var(--ts-color-common-white);
 	text-shadow: none;
 }
 
 * {
 	@include placeholder {
-		color: var(--tj-color-common-black);
-		font-size: var(--tj-fs-body);
+		color: var(--ts-color-common-black);
+		font-size: var(--ts-fs-body);
 		opacity: 1;
 	}
 }
@@ -254,4 +255,28 @@ img {
 }
 .fix {
 	overflow: hidden;
+}
+
+/**
+ 	WP Admin Bar CSS
+*/
+.admin-bar {
+	header {
+		&.sticky {
+			margin-top: 32px;
+		}
+		@media #{$wp-sm} {
+			&.sticky {
+				margin-top: 46px;
+			}
+		}
+		@media #{$wp-xs} {
+			&.sticky {
+				margin-top: 0;
+			}
+			&.header-absolute {
+				margin-top: 46px;
+			}
+		}
+	}
 }
