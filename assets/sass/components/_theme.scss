@@ -38,7 +38,7 @@ body {
 	font-size: var(--tj-fs-body);
 	font-weight: normal;
 	color: var(--tj-color-text-body);
-	line-height: 26px;
+	line-height: 1.6;
 }
 
 a {
@@ -112,15 +112,6 @@ ul {
 	padding: 0px;
 }
 
-p {
-	font-family: var(--tj-ff-p);
-	font-size: 16px;
-	font-weight: var(--tj-fw-normal);
-	color: var(--tj-color-text-body);
-	margin-bottom: 15px;
-	line-height: 25px;
-}
-
 a,
 .btn,
 button,
@@ -188,17 +179,14 @@ textarea {
 	background-color: (--tj-color-common-white);
 	height: auto;
 	width: 100%;
-	font-size: 16px;
+	font-size: var(--tj-fs-body);
 	border: 1px solid var(--tj-color-common-white);
 	color: var(--tj-color-common-black);
-	padding-left: 29px;
-	padding-right: 29px;
+	padding: 10px 15px;
 }
 
 input[type="color"] {
 	appearance: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
 	background: none;
 	border: 0;
 	cursor: pointer;
@@ -251,6 +239,9 @@ input[type="color"] {
 /**
  	Common Classes CSS
 */
+img {
+	max-width: 100%;
+}
 .w-img {
 	& img {
 		width: 100%;
@@ -263,35 +254,4 @@ input[type="color"] {
 }
 .fix {
 	overflow: hidden;
-}
-.clear {
-	clear: both;
-}
-.f-left {
-	float: left;
-}
-.f-right {
-	float: right;
-}
-.z-index-1 {
-	z-index: 1;
-}
-.z-index-11 {
-	z-index: 11;
-}
-.overflow-y-visible {
-	overflow-x: hidden;
-	overflow-y: visible;
-}
-.p-relative {
-	position: relative;
-}
-.p-absolute {
-	position: absolute;
-}
-.include-bg {
-	@include background();
-}
-.b-radius {
-	border-radius: 6px;
 }
