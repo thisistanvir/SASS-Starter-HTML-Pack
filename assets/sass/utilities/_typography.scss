@@ -6,7 +6,6 @@ $font-family: (
 	ff: (
 		body: "'Jost', sans-serif",
 		heading: "'Old Standard TT', serif",
-		p: "'Jost', sans-serif",
 		fontawesome: '"Font Awesome 6 Pro"',
 	),
 );
@@ -30,8 +29,7 @@ $font-scale: (
 // Font Size
 $font-size: (
 	fs: (
-		body: 14px,
-		p: 14px,
+		body: 16px,
 		h1: 40px,
 		h2: 36px,
 		h3: 24px,

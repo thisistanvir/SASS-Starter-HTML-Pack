@@ -35,13 +35,14 @@ START: Theme Default CSS
 body {
 	font-family: var(--ts-ff-body);
 	font-size: var(--ts-fs-body);
-	font-weight: normal;
+	font-weight: var(--ts-fw-normal);
 	color: var(--ts-color-text-body);
 	line-height: 1.6;
 }
 
 a {
 	text-decoration: none;
+	@include transition(all 0.4s ease-in-out 0s);
 }
 
 h1,
@@ -55,7 +56,6 @@ h6 {
 	margin-top: 0px;
 	font-weight: var(--ts-fw-sbold);
 	line-height: 1.2;
-	@include transition(all 0.3s ease-in-out 0s);
 }
 
 h1 {
@@ -88,11 +88,11 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
+	display: inline-block;
 	font-size: inherit;
 	color: inherit;
 	font-weight: inherit;
 	line-height: inherit;
-	display: block;
 }
 
 h1:hover a,
@@ -111,32 +111,13 @@ ul {
 	padding: 0px;
 }
 
-a,
-.btn,
-button,
-span,
-p,
-input,
-select,
-textarea,
-li,
-img,
-svg path,
-*::after,
-*::before,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	@include transition(all 0.3s ease-in-out 0s);
-}
-
 a:focus,
-.button:focus {
+a:focus-visible,
+button:focus,
+button:focus-visible {
 	text-decoration: none;
 	outline: none;
+	box-shadow: 0 0 0;
 }
 
 a:focus,
@@ -153,46 +134,11 @@ button {
 	background: transparent;
 }
 
-button:hover {
-	cursor: pointer;
-}
-
-button:focus,
-button:focus:not(:focus-visible) {
-	outline: 0;
-	box-shadow: 0 0 0;
-}
-
 .uppercase {
 	text-transform: uppercase;
 }
 .capitalize {
 	text-transform: capitalize;
-}
-
-select,
-.nice-select,
-input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
-textarea {
-	outline: none;
-	background-color: (--ts-color-common-white);
-	height: auto;
-	width: 100%;
-	font-size: var(--ts-fs-body);
-	border: 1px solid var(--ts-color-common-black);
-	color: var(--ts-color-common-black);
-	padding: 10px 15px;
-}
-
-input[type="color"] {
-	appearance: none;
-	background: none;
-	border: 0;
-	cursor: pointer;
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	border-radius: 50%;
 }
 * {
 	scrollbar-width: thin;
@@ -201,14 +147,13 @@ input[type="color"] {
 ::-webkit-scrollbar {
 	height: 4px;
 	width: 6px;
-	background: var(--ts-color-grey-1);
 }
+
 ::-webkit-scrollbar-thumb {
-	background: var(--ts-color-theme-primary);
+	background: var(--tj-color-theme-primary);
 	-webkit-border-radius: 1ex;
 	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
 }
-
 ::-webkit-scrollbar-corner {
 	background: transparent;
 }

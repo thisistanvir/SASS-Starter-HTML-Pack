@@ -25,7 +25,6 @@ START: Theme Default CSS
    */
   --ts-ff-body: 'Jost', sans-serif;
   --ts-ff-heading: 'Old Standard TT', serif;
-  --ts-ff-p: 'Jost', sans-serif;
   --ts-ff-fontawesome: "Font Awesome 6 Pro";
   /**
      @Font-weight Declaration
@@ -43,8 +42,7 @@ START: Theme Default CSS
   /**
      @Font-Size Declaration
    */
-  --ts-fs-body: 14px;
-  --ts-fs-p: 14px;
+  --ts-fs-body: 16px;
   --ts-fs-h1: 40px;
   --ts-fs-h2: 36px;
   --ts-fs-h3: 24px;
@@ -78,13 +76,15 @@ START: Theme Default CSS
 body {
   font-family: var(--ts-ff-body);
   font-size: var(--ts-fs-body);
-  font-weight: normal;
+  font-weight: var(--ts-fw-normal);
   color: var(--ts-color-text-body);
   line-height: 1.6;
 }
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
 }
 
 h1,
@@ -98,8 +98,6 @@ h6 {
   margin-top: 0px;
   font-weight: var(--ts-fw-sbold);
   line-height: 1.2;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
 }
 
 h1 {
@@ -132,11 +130,11 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
+  display: inline-block;
   font-size: inherit;
   color: inherit;
   font-weight: inherit;
   line-height: inherit;
-  display: block;
 }
 
 h1:hover a,
@@ -155,33 +153,14 @@ ul {
   padding: 0px;
 }
 
-a,
-.btn,
-button,
-span,
-p,
-input,
-select,
-textarea,
-li,
-img,
-svg path,
-*::after,
-*::before,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
 a:focus,
-.button:focus {
+a:focus-visible,
+button:focus,
+button:focus-visible {
   text-decoration: none;
   outline: none;
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
 }
 
 a:focus,
@@ -198,50 +177,12 @@ button {
   background: transparent;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
-button:focus,
-button:focus:not(:focus-visible) {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0;
-          box-shadow: 0 0 0;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
 
 .capitalize {
   text-transform: capitalize;
-}
-
-select,
-.nice-select,
-input:not([type=submit]):not([type=radio]):not([type=checkbox]),
-textarea {
-  outline: none;
-  background-color: --ts-color-common-white;
-  height: auto;
-  width: 100%;
-  font-size: var(--ts-fs-body);
-  border: 1px solid var(--ts-color-common-black);
-  color: var(--ts-color-common-black);
-  padding: 10px 15px;
-}
-
-input[type=color] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  border-radius: 50%;
 }
 
 * {
@@ -252,11 +193,10 @@ input[type=color] {
 ::-webkit-scrollbar {
   height: 4px;
   width: 6px;
-  background: var(--ts-color-grey-1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ts-color-theme-primary);
+  background: var(--tj-color-theme-primary);
   -webkit-border-radius: 1ex;
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
 }
@@ -352,6 +292,14 @@ img {
   Buttons CSS
 */
 /**----------------------------------------
-START: Theme Header CSS
+START: Header CSS
 ----------------------------------------*/
-/* !END: Theme Header CSS *//*# sourceMappingURL=main.css.map */
+/* !END: Header CSS */
+/**----------------------------------------
+START: Footer CSS
+----------------------------------------*/
+/* !END: Footer CSS */
+/**----------------------------------------
+START: Hero Banner CSS
+----------------------------------------*/
+/* !END: Hero Banner CSS *//*# sourceMappingURL=main.css.map */
