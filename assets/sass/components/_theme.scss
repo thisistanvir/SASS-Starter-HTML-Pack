@@ -29,6 +29,12 @@ START: Theme Default CSS
 	box-sizing: border-box;
 }
 
+html,
+body,
+.site-content {
+	overflow-x: hidden;
+	position: relative;
+}
 /**
   Typography CSS
 */
