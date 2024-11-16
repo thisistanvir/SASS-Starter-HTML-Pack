@@ -30,9 +30,11 @@ START: Theme Default CSS
 }
 
 html,
-body,
-.site-content {
+body {
 	overflow-x: hidden;
+	position: relative;
+}
+.site-content {
 	position: relative;
 }
 /**
