@@ -4,7 +4,7 @@
 
     Theme Name: Starter - Starter HTML5 Template
     Author: STARTER
-    Support: support@starter.com
+    Support: https://support.themeshala.com/
     Description: Starter - Starter HTML5 Template
     Version: 1.0
 
@@ -29,12 +29,14 @@ START: Theme Default CSS
 	box-sizing: border-box;
 }
 
-html,
 body {
 	overflow-x: hidden;
 	position: relative;
+	z-index: 1;
 }
+
 .site-content {
+	overflow: hidden;
 	position: relative;
 }
 /**
@@ -43,7 +45,7 @@ body {
 body {
 	font-family: var(--ts-ff-body);
 	font-size: var(--ts-fs-body);
-	font-weight: var(--ts-fw-normal);
+	font-weight: var(--ts-fw-regular);
 	color: var(--ts-color-text-body);
 	line-height: 1.6;
 }
@@ -96,7 +98,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-	display: inline-block;
+	display: inline-flex;
 	font-size: inherit;
 	color: inherit;
 	font-weight: inherit;
@@ -148,9 +150,10 @@ button {
 .capitalize {
 	text-transform: capitalize;
 }
+
 * {
 	scrollbar-width: thin;
-	scrollbar-color: var(--ts-color-theme-primary) var(--ts-color-grey-1);
+	scrollbar-color: var(--ts-color-theme-primary) transparent;
 }
 ::-webkit-scrollbar {
 	height: 4px;
@@ -160,34 +163,48 @@ button {
 ::-webkit-scrollbar-thumb {
 	background: var(--tj-color-theme-primary);
 	-webkit-border-radius: 1ex;
-	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 ::-webkit-scrollbar-corner {
 	background: transparent;
 }
 
-*::-moz-selection {
-	background: var(--ts-color-common-black);
-	color: var(--ts-color-common-white);
-	text-shadow: none;
-}
-::-moz-selection {
-	background: var(--ts-color-common-black);
-	color: var(--ts-color-common-white);
-	text-shadow: none;
-}
-::selection {
-	background: var(--ts-color-common-black);
-	color: var(--ts-color-common-white);
-	text-shadow: none;
-}
-
 * {
 	@include placeholder {
-		color: var(--ts-color-common-black);
+		color: var(--ts-color-text-body);
 		font-size: var(--ts-fs-body);
 		opacity: 1;
 	}
+}
+
+select,
+.nice-select,
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+	outline: none;
+	background-color: transparent;
+	width: 100%;
+	height: auto;
+	min-height: 44px;
+	font-size: var(--ts-fs-body);
+	border: 1px solid var(--ts-color-border-1);
+	color: var(--ts-color-text-body);
+	padding: 10px 20px;
+	box-shadow: 0 0 0;
+	border-radius: 8px;
+	&:focus {
+		border-color: var(--ts-color-theme-primary);
+	}
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
 }
 
 /**
@@ -208,6 +225,24 @@ img {
 }
 .fix {
 	overflow: hidden;
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl,
+.row {
+	--bs-gutter-x: 30px;
+}
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	max-width: 1350px;
 }
 
 /**
